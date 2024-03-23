@@ -1,9 +1,7 @@
 import numpy as np
 import streamlit as st
-# from sklearn.preprocessing import StandardScaler
 import pandas as pd
 import joblib
-import sklearn
 import time
 
 if 'showAlert' not in st.session_state:
@@ -23,19 +21,11 @@ std_scaler = joblib.load('std_scaler.pkl')
 
 st.title('Multi-Class Prediction of Obesity Risk!')
 
-# add_selectbox = st.sidebar.selectbox(
-#     "How would you like to be contacted?",
-#     ("Email", "Home phone", "Mobile phone")
-# )
-# radio = st.sidebar.radio(
-#         "Choose a shipping method",
-#         ("Standard (5-15 days)", "Express (2-5 days)")
-#     )
 
-Gender = st.selectbox('Input Gender', ['Male', 'Female'])
-Age = st.slider('Patient Age: ', 17, 100)
 Height = st.number_input('Patient Height: ')
 Weight = st.number_input('Patient Weight: ')
+Gender = st.radio('Select Gender', ['Male', 'Female'])
+Age = st.slider('Patient Age: ', 17, 100)
 family_history_with_overweight = st.selectbox('Family History With Overweight', ['yes', 'no'])
 FAVC = st.selectbox('FAVC', ['yes', 'no'])
 FCVC = st.number_input('FCVC: ')
@@ -47,7 +37,7 @@ SCC = st.selectbox('SCC', ['yes', 'no'])
 FAF = st.number_input('FAF: ')
 TUE = st.number_input('TUE: ')
 CALC = st.selectbox('CALC', ['no', 'Sometimes', 'Frequently'])
-MTRANS = st.selectbox('Transpotation method', ['Public_Transportation', 'Automobile', 'Walking', 'Motorbike', 'Bike'])
+MTRANS = st.selectbox('Transportation method', ['Public_Transportation', 'Automobile', 'Walking', 'Motorbike', 'Bike'])
 
 
 def predict():
