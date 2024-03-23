@@ -10,10 +10,15 @@ This Streamlit app is developed for the 'Multi-Class Prediction of Obesity Risk'
 ## Installation
 
 1. Clone or download the repository to your local machine.
+
+```bash
+git clone git@github.com:Prophet199607/Multi-Class-Prediction-of-Obesity-Risk.git
+```
+
 2. Navigate to the project directory.
 
 ```bash
-cd obesity-risk-prediction-app
+cd Multi-Class-Prediction-of-Obesity-Risk
 ```
 3. Install the required Python packages using pip.
 
